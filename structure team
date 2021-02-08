@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+
+#define size 3
+
+struct Team
+{
+    char name[20];
+    char town[20];
+    int score;
+};
+
+int main()
+{
+    struct Team* t;
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("Name - ");
+        scanf("%s", t[i].name);
+
+        printf("Town - ");
+        scanf("%s", t[i].town);
+
+        printf("Score - ");
+        scanf("%d", &t[i].score);
+
+        printf("\n\n");
+    }
+
+    int max = 0;
+    int num = 0;
+
+    for (int i = 1; i < size; i++)
+    {
+        if (t[i].score > max)
+        {
+            max = t[i].score;
+        }
+    }
+
+    printf("Honour is %s", t[num].name);
+
+    return 0;
+}
